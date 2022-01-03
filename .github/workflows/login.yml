@@ -1,0 +1,29 @@
+
+name: Daily_Login
+
+on:
+  workflow_dispatch:
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+
+      - name: Login
+        env:
+          TZ: Asia/Tokyo
+        run: |
+          python login.py
+      
+      - name: git push
+        run: |
+          git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add .
+          git commit -m "今日のログイン"
+          git push origin HEAD:${GITHUB_REF}
