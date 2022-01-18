@@ -10,7 +10,8 @@ d_today = datetime.date.today().strftime("%Y/%m/%d")
 # d_today = d_today.strftime("%Y/%m/%d")
 
 stones = ["Intel Core 2 Duo E7500", "Intel Core 2 Duo E7300", "Intel Core 2 Duo E7400", "Intel Core 2 Duo E8400",
-          "Intel Core 2 Duo E8600", "Intel Core 2 Quad Q8200", "AMD A6-5400K", "AMD Ryzen 5 1600AF", "Intel Xeon E-2134"]
+          "Intel Core 2 Duo E8500", "Intel Core 2 Duo E8600", "Intel Core 2 Quad Q8200", "Intel Core i7 2700k", "AMD A6-5400K", "AMD Ryzen 5 1600AF",
+          "Intel Xeon E-2134"]
 
 bonus = (f"{random.choice(stones)}")
 
