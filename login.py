@@ -29,6 +29,76 @@ Intel_LGA775 = [
 "Intel Core 2 Duo E8500",
 "Intel Core 2 Quad Q9400",
 ]
+
+Intel_LGA1155_Sandy_Bridge = [
+"Intel Pentium G620T",
+"Intel Pentium G630T",
+"Intel Pentium G640T",
+"Intel Pentium G645T",
+"Intel Pentium G860T",
+"Intel Pentium G620",
+"Intel Pentium G630",
+"Intel Pentium G640",
+"Intel Pentium G645",
+"Intel Pentium G840",
+"Intel Pentium G850",
+"Intel Pentium G860",
+"Intel Pentium G870",
+"Intel Celeron G440",
+"Intel Celeron G460",
+"Intel Celeron G465",
+"Intel Celeron G470",
+"Intel Celeron G530T",
+"Intel Celeron G540T",
+"Intel Celeron G550T",
+"Intel Celeron G530",
+"Intel Celeron G540",
+"Intel Celeron G550",
+"Intel Celeron G555",
+"Intel Xeon E3-1220",
+"Intel Xeon E3-1225",
+"Intel Xeon E3-1220L",
+"Intel Xeon E3-1230",
+"Intel Xeon E3-1235",
+"Intel Xeon E3-1240",
+"Intel Xeon E3-1245",
+"Intel Xeon E3-1260L",
+"Intel Xeon E3-1270",
+"Intel Xeon E3-1275",
+"Intel Xeon E3-1280",
+"Intel Xeon E3-1290",
+]
+
+Intel_LGA1155_Ivy_Bridge = [
+"Intel Pentium G2020T",
+"Intel Pentium G2030T",
+"Intel Pentium G2100T",
+"Intel Pentium G2120T",
+"Intel Pentium G2010",
+"Intel Pentium G2020",
+"Intel Pentium G2030",
+"Intel Pentium G2120",
+"Intel Pentium G2130",
+"Intel Pentium G2140",
+"Intel Celeron G1610T",
+"Intel Celeron G1620T",
+"Intel Celeron G1610",
+"Intel Celeron G1620",
+"Intel Celeron G1630",
+"Intel Xeon E3-1220 v2",
+"Intel Xeon E3-1225 v2",
+"Intel Xeon E3-1220L v2",
+"Intel Xeon E3-1230 v2",
+"Intel Xeon E3-1235 v2",
+"Intel Xeon E3-1240 v2",
+"Intel Xeon E3-1245 v2",
+"Intel Xeon E3-1260L v2",
+"Intel Xeon E3-1270 v2",
+"Intel Xeon E3-1275 v2",
+"Intel Xeon E3-1280 v2",
+"Intel Xeon E3-1290 v2",
+]
+
 AMD_Socket_FM2 = [
 "AMD A10-5700",
 "AMD A10-5700",
@@ -56,9 +126,16 @@ AMD_Socket_FM2 = [
 "AMD A8-6600K",
 ]
 
+AMD_Socket_AM4 = [
+"AMD Ryzen5 1600 AF"    #* ここ当たり枠
+]
+
 stones = {
 "LGA775": Intel_LGA775,
+"LGA1155_Sandy_Bridge": Intel_LGA1155_Sandy_Bridge,
+"LGA1155_Ivy_Bridge": Intel_LGA1155_Ivy_Bridge,
 "SocketFM2": AMD_Socket_FM2,
+"SocketAM4": AMD_Socket_AM4,
 }
 
 bonus = (f"{random.choice(random.choice(list(stones.items()))[1])}")
