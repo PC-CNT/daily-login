@@ -9,11 +9,59 @@ import unicodedata
 d_today = datetime.date.today().strftime("%Y/%m/%d")
 # d_today = d_today.strftime("%Y/%m/%d")
 
-stones = ["Intel Core 2 Duo E7500", "Intel Core 2 Duo E7300", "Intel Core 2 Duo E7400", "Intel Core 2 Duo E8400",
-          "Intel Core 2 Duo E8500", "Intel Core 2 Duo E8600", "Intel Core 2 Quad Q8200", "Intel Core i7 2700k", "AMD A6-5400K", "AMD Ryzen 5 1600AF",
-          "Intel Xeon E-2134"]
+Intel_LGA775 = [
+"Intel Core 2 Duo E4300",
+"Intel Core 2 Duo E4400",
+"Intel Core 2 Duo E4500",
+"Intel Core 2 Duo E4600",
+"Intel Core 2 Duo E4700",
+"Intel Core 2 Duo E6300",
+"Intel Core 2 Duo E6320",
+"Intel Core 2 Duo E6400",
+"Intel Core 2 Duo E6420",
+"Intel Core 2 Duo E6600",
+"Intel Core 2 Duo E6700",
+"Intel Core 2 Duo E7300",
+"Intel Core 2 Duo E7400",
+"Intel Core 2 Duo E7500",
+"Intel Core 2 Duo E8400",
+"Intel Core 2 Duo E8600",
+"Intel Core 2 Duo E8500",
+"Intel Core 2 Quad Q9400",
+]
+AMD_Socket_FM2 = [
+"AMD A10-5700",
+"AMD A10-5700",
+"AMD A10-5800K",
+"AMD A10-5800K",
+"AMD A10-6700",
+"AMD A10-6700T",
+"AMD A10-6790K",
+"AMD A10-6800K",
+"AMD A10-6800K",
+"AMD A4-4000",
+"AMD A4-4020",
+"AMD A4-5300",
+"AMD A4-5300",
+"AMD A4-6300",
+"AMD A4-7300",
+"AMD A6-5400K",
+"AMD A6-5400K",
+"AMD A6-6400K",
+"AMD A8-5500",
+"AMD A8-5500",
+"AMD A8-5600K",
+"AMD A8-5600K",
+"AMD A8-6500",
+"AMD A8-6600K",
+]
 
-bonus = (f"{random.choice(stones)}")
+stones = {
+"LGA775": Intel_LGA775,
+"SocketFM2": AMD_Socket_FM2,
+}
+
+bonus = (f"{random.choice(random.choice(list(stones.items()))[1])}")
 
 daycounter = 1
 
