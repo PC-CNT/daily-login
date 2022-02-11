@@ -125,6 +125,20 @@ Intel_LGA1155_Ivy_Bridge = [
 "Intel Xeon E3-1290 v2",
 ]
 
+AMD_Socket_FM1 = [
+"AMD A8-3870K",
+"AMD A8-3850",
+"AMD A8-3820",
+"AMD A8-3800",
+"AMD A6-3670K",
+"AMD A6-3650",
+"AMD A6-3620",
+"AMD A6-3600",
+"AMD A6-3500",
+"AMD A4-3400",
+"AMD A4-3300",
+]
+
 AMD_Socket_FM2 = [
 "AMD A10-5700",
 "AMD A10-5700",
@@ -152,7 +166,7 @@ AMD_Socket_FM2 = [
 "AMD A8-6600K",
 ]
 
-AMD_Socket_AM4 = [
+AMD_Socket_AM4_ZenPlus = [
 "AMD Ryzen5 1600 AF"    #* ここ当たり枠
 ]
 
@@ -160,8 +174,9 @@ stones = {
 "LGA775": Intel_LGA775,
 "LGA1155_Sandy_Bridge": Intel_LGA1155_Sandy_Bridge,
 "LGA1155_Ivy_Bridge": Intel_LGA1155_Ivy_Bridge,
+"SocketFM1": AMD_Socket_FM1,
 "SocketFM2": AMD_Socket_FM2,
-"SocketAM4": AMD_Socket_AM4,
+"SocketAM4_Zen": AMD_Socket_AM4_ZenPlus,
 }
 
 bonus = (f"{random.choice(random.choice(list(stones.items()))[1])}")
