@@ -176,7 +176,7 @@ stones = {
 "LGA1155_Ivy_Bridge": Intel_LGA1155_Ivy_Bridge,
 "SocketFM1": AMD_Socket_FM1,
 "SocketFM2": AMD_Socket_FM2,
-"SocketAM4_Zen": AMD_Socket_AM4_ZenPlus,
+"SocketAM4_ZenPlus": AMD_Socket_AM4_ZenPlus,
 }
 
 bonus = (f"{random.choice(random.choice(list(stones.items()))[1])}")
