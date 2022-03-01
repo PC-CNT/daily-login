@@ -14,10 +14,12 @@ jobs:
         uses: actions/setup-python@v2
 
       - name: Login
+        id: login
         env:
           TZ: Asia/Tokyo
         run: |
           python login.py
+        continue-on-error: true
       
       - name: git push
         run: |
@@ -27,3 +29,4 @@ jobs:
           git add .
           git commit -m "今日のログイン"
           git push origin HEAD:${GITHUB_REF}
+        if: steps.login.outcome == 'success'

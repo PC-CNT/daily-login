@@ -1,10 +1,9 @@
 
-
 import datetime
-import random
 import os
+import random
+import sys
 import unicodedata
-
 
 d_today = datetime.date.today().strftime("%Y/%m/%d")
 # d_today = d_today.strftime("%Y/%m/%d")
@@ -214,8 +213,7 @@ with open(path_md, "r", encoding="utf-8") as f:
         if line.startswith("## "):
             daycounter += 1
         if (line.startswith("## " + str(d_today))):
-            print(f"今日（{d_today}）のログインボーナスは取得済みです！")
-            exit()
+            sys.exit(f"今日（{d_today}）のログインボーナスは取得済みです！")
 
 
 #* ログインボーナス取得
